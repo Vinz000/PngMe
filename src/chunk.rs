@@ -8,6 +8,7 @@ use std::str;
 
 pub const CRC_ISO: Crc<u32> = Crc::<u32>::new(&CRC_32_ISO_HDLC);
 
+#[derive(Debug)]
 pub struct Chunk {
     length: u32,
     chunk_type: ChunkType,
