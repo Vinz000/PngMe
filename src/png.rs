@@ -4,7 +4,7 @@ use std::fmt;
 
 #[allow(dead_code)]
 pub struct Png {
-    png_signature: [u8; 8],
+    signature: [u8; 8],
     chunks: Vec<Chunk>,
 }
 
@@ -13,7 +13,7 @@ impl Png {
     pub const STANDARD_HEADER: [u8; 8] = [137, 80, 78, 71, 13, 10, 26, 10];
 
     fn signature(&self) -> [u8; 8] {
-        self.png_signature
+        self.signature
     }
 
     pub fn chunks(&self) -> &Vec<Chunk> {
@@ -22,7 +22,7 @@ impl Png {
 
     pub fn from_chunks(chunks: Vec<Chunk>) -> Png {
         Png {
-            png_signature: Self::STANDARD_HEADER,
+            signature: Self::STANDARD_HEADER,
             chunks,
         }
     }
