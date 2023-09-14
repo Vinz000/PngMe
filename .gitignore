@@ -13,7 +13,8 @@ Cargo.lock
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 
-
+# Don't push any png files to repo
+*.png
 # Added by cargo
 
 /target
