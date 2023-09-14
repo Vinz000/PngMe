@@ -95,7 +95,18 @@ impl TryFrom<&[u8]> for Png {
 
 impl fmt::Display for Png {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{:?}{:?}", self.signature(), self.chunks())
+        write!(f, "{:?}\n", self.signature())?;
+        for chunk in self.chunks().iter() {
+            write!(
+                f,
+                "{} {} {}\n",
+                chunk.chunk_type(),
+                chunk.length(),
+                chunk.crc()
+            )?;
+        }
+
+        Ok(())
     }
 }
 
