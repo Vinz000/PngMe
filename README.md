@@ -1,17 +1,17 @@
-# PngMe
-A cli tool to encode messages into Png files using [Picklenerd's guide](https://picklenerd.github.io/pngme_book/introduction.html).
+# PNGme
+A cli tool to encode messages into PNG files using [Picklenerd's guide](https://picklenerd.github.io/pngme_book/introduction.html).
 
 # Installation
 Method 1: Clone the repo and install using cargo.
 ```
-$ git clone https://github.com/Vinz000/Vinz000.git
-$ cd ./PngMe
+$ git clone https://github.com/Vinz000/pngme.git
+$ cd ./pngme
 $ cargo install --path .
 ```
 
 Method 2: Install directly from git
 ```
-$ cargo install --git https://github.com/Vinz000/PngMe
+$ cargo install --git https://github.com/Vinz000/pngme.git
 ```
 
 # Usage
